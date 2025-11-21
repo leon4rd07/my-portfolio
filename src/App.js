@@ -28,7 +28,8 @@ const projectsData = [
     image: spaceDefense,
     technologies: ["HTML", "Node.js", "CSS", "Three.js"],
     liveUrl: "https://your-ecommerce-demo.com",
-    githubUrl: "https://github.com/yourusername/ecommerce-platform",
+    githubUrl:
+      "https://github.com/leon4rd07/Computer-Graphic-Qualification.git",
     featured: true,
   },
   {
@@ -39,7 +40,7 @@ const projectsData = [
     image: compVis,
     technologies: ["Python", "OpenCV"],
     liveUrl: "https://your-taskapp-demo.com",
-    githubUrl: "https://github.com/yourusername/task-management",
+    githubUrl: "https://github.com/leon4rd07/Computer-Vision-Qualification.git",
     featured: true,
   },
   {
@@ -50,7 +51,7 @@ const projectsData = [
     image: yayStock,
     technologies: ["Java", "JavaFX", "MySQL"],
     liveUrl: "https://your-weather-demo.com",
-    githubUrl: "https://github.com/yourusername/weather-dashboard",
+    githubUrl: "https://github.com/leon4rd07/YayStock.git",
     featured: false,
   },
   {
@@ -59,14 +60,13 @@ const projectsData = [
     description:
       "Successfully developed three advanced deep learning models as part of a qualification project. A Deep Convolutional Neural Network (DCNN) was built and trained on an image dataset with preprocessing and multi-layer architecture for classification tasks. A Variational Autoencoder was implemented to reconstruct images and analyze reconstruction loss. Finally, a Self-Supervised Learning model was designed from scratch on a text dataset without relying on prebuilt models, achieving high accuracy.",
     image: deepL,
-    technologies: ["Python", "Keras", "TensorFlow", "NumPy",],
+    technologies: ["Python", "Keras", "TensorFlow", "NumPy"],
     liveUrl: "https://your-portfolio.com",
-    githubUrl: "https://github.com/yourusername/portfolio",
+    githubUrl:"https://github.com/leon4rd07/Deep-Learning-Qualification.git",
     featured: false,
   },
 ];
 
-// Personal Information - Update with your details
 const personalInfo = {
   name: "Leonardo Nathaniel Lembono",
   bio: "Enthusiastic college student with a strong foundation in coding and problem-solving. Experienced in multiple programming languages and frameworks, I enjoy collaborating on projects that blend creativity, technology, and real-world impact.",
@@ -75,7 +75,6 @@ const personalInfo = {
   linkedin: "linkedin.com/in/leonardonl",
 };
 
-// Dark Mode Toggle Component
 const DarkModeToggle = ({ isDark, onToggle }) => {
   return (
     <button
@@ -92,7 +91,6 @@ const DarkModeToggle = ({ isDark, onToggle }) => {
   );
 };
 
-// Project Card Component
 const ProjectCard = ({ project }) => {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -143,13 +141,11 @@ const ProjectCard = ({ project }) => {
   );
 };
 
-// Main Portfolio Component
 const Portfolio = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   const [isDarkMode, setIsDarkMode] = useState(false);
 
-  // Initialize dark mode from user's preference
   useEffect(() => {
     const savedTheme = localStorage.getItem("darkMode");
     const prefersDark = window.matchMedia(
@@ -163,7 +159,6 @@ const Portfolio = () => {
     }
   }, []);
 
-  // Apply dark mode class to body
   useEffect(() => {
     if (isDarkMode) {
       document.body.classList.add("dark-mode");
@@ -177,7 +172,6 @@ const Portfolio = () => {
     setIsDarkMode(!isDarkMode);
   };
 
-  // Handle scroll for active section highlighting
   useEffect(() => {
     const handleScroll = () => {
       const sections = ["home", "projects", "contact"];
@@ -215,7 +209,6 @@ const Portfolio = () => {
 
   return (
     <div className="portfolio">
-      {/* Navigation */}
       <nav className="navbar">
         <div className="nav-container">
           <div className="nav-content">
@@ -267,7 +260,6 @@ const Portfolio = () => {
         )}
       </nav>
 
-      {/* Hero Section */}
       <section id="home" className="hero">
         <div className="hero-content">
           <div className="hero-avatar">
@@ -324,7 +316,6 @@ const Portfolio = () => {
         </div>
       </section>
 
-      {/* Projects Section */}
       <section id="projects" className="projects">
         <div className="container">
           <div className="section-header">
@@ -358,7 +349,6 @@ const Portfolio = () => {
         </div>
       </section>
 
-      {/* Contact Section */}
       <section id="contact" className="contact">
         <div className="container">
           <div className="section-header">
@@ -401,7 +391,6 @@ const Portfolio = () => {
         </div>
       </section>
 
-      {/* Footer */}
       <footer className="footer">
         <div className="container">
           <p className="footer-text">
